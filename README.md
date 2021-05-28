@@ -2,13 +2,13 @@
 
 ```bash
 # run mysql server in docker
-docker run --name lcoal-mysql  \
+docker run --name local-mysql  \
 -p 3306:3306 \
 -e MYSQL_ROOT_HOST='%' -e MYSQL_ROOT_PASSWORD='admin123'   \
 -d mysql/mysql-server:latest
 
 # connect to mysql server 
-docker exec -it lcoal-mysql sh 
+docker exec -it local-mysql sh 
 mysql -uroot -padmin123
 
 # create test database and grant to user
